@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    margin: 0;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.calendar_wrapper {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.image {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: linear-gradient(to right, #b77d25, #4ca1af);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: 526px;
+    object-fit: cover;
+}
+
+.calendar {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.calendar div {
+    background: linear-gradient(0deg, #116d91 10%, #efefef 90%);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 22px;
+}
+
+.month {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.month span {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.sunday {
+    color: red;
+}
+
+.quote {
+    text-align: center;
+    font-size: 25px;
+}
+
+.selected_month {
+    margin-left: 10px;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.selected_year {
+    padding: 3px;
+    font-size: 16px;
+}
+
+
+.left_arrow {
+    position: absolute;
+    top: 35vh;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+}
+
+.left_arrow:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.right_arrow {
+    position: absolute;
+    top: 35vh;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    right: 0;
+}
+
+.right_arrow:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width:350px) {
+    .calendar div {
+        font-size: 18px;
+    }
+
+    .month_name {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .image {
+        display: none;
+    }
+
+    .calendar_wrapper {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .quote {
+        font-size: 20px;
+    }
+
+    .month span {
+        font-size: 20px;
+    }
+}
